@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#coding=utf8
 '''
 File: line_count.py
 Author: Leo_vim

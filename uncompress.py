@@ -18,10 +18,3 @@ class ContentEncodingProcessor(urllib2.BaseHandler):
             data = f.read()
 
         return data
-
-def test():
-    url = 'http://api.stackoverflow.com/1.1/search?intitle=he'
-    uncom = ContentEncodingProcessor()
-    print uncom.uncompress(url)
-
-# test()

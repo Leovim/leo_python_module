@@ -19,3 +19,6 @@ leo_python_module
 5. URL
 6. QQ 号
 7. IP地址
+
+### convert_hex.py
+使用python convert_hex.py args将各参数由10进制转换为16进制数字

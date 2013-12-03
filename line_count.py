@@ -36,6 +36,7 @@ def traversal(filelist, dirname):
             if suffix[1] in suffix_list:
                 print subname
                 line_number = linecount(subname)
+                print line_number
                 total_number += int(line_number)
             else:
                 continue

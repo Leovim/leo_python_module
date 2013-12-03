@@ -17,7 +17,8 @@ def linecount(filename):
     for line in open(filename):
         if(line != '\n'):
             count += 1
-            return count
+
+    return count
 
 def filecount(dirname):
     if os.path.isdir(dirname) is True:
@@ -25,10 +26,12 @@ def filecount(dirname):
         line_number = traversal(filelist, dirname)
     else:
         line_number = linecount(dirname)
-        return line_number
+
+    return line_number
 
 def traversal(filelist, dirname):
     total_number = 0
+
     for subname in filelist:
         subname = dirname + subname
         if os.path.isdir(subname) is not True:
@@ -44,7 +47,8 @@ def traversal(filelist, dirname):
             subname = subname + '/'
             line_number = filecount(subname)
             total_number += int(line_number)
-            return total_number
+
+    return total_number
 
 def main():
     dirname = raw_input('Please input a dirname')

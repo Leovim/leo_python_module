@@ -2,8 +2,8 @@
 '''
 File: line_count.py
 Author: Leo_vim
-Description: 
-    '''
+Description:
+'''
 
 import sys
 import os

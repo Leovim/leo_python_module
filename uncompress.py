@@ -13,8 +13,11 @@ class ContentEncodingProcessor(urllib2.BaseHandler):
         request.add_header('Accept-encoding', 'gzip')
         response = urllib2.urlopen(request)
         if response.info().get('Content-Encoding') == 'gzip':
+            print "the page is compressed."
             buf = StringIO(response.read())
             f = gzip.GzipFile(fileobj = buf)
             data = f.read()
-
-        return data
+            return data
+        else:
+            print "the page is uncompressed."
+            return response.read()
